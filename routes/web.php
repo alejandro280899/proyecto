@@ -13,3 +13,4 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('pagos', App\Http\Controllers\PagoController::class);
 Route::resource('tipos-pagos', App\Http\Controllers\TipoPagoController::class);
+Route::resource('proyectos', App\Http\Controllers\ProyectoController::class);

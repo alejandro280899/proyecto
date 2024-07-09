@@ -14,10 +14,12 @@ return new class extends Migration
         Schema::create('proyectos', function (Blueprint $table) {
             $table->id();
             $table->string('codigo');
-            $table->text('descripcion');
-            $table->float('cuantia');
+            $table->string('descripcion');
+            $table->string('cuantia');
             $table->date('fecha_inicio');
             $table->date('fecha_fin');
+
+            
             $table->unsignedBigInteger('cliente_id');
             $table->foreign('cliente_id')->references('id')->on('clientes')->onDelete('cascade');
             $table->timestamps();

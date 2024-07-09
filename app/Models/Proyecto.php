@@ -8,10 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Proyecto extends Model
 {
     use HasFactory;
+    
+    protected $fillable = ['codigo','descripcion','cuantia','fecha_inicio','fecha_fin'];
 
     public function cliente()
     {
-        return $this->belongsTo(Cliente::class);
+        return $this->belongsTo(Cliente::class,);
     }
 
     public function colaboradores()
